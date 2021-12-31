@@ -10,7 +10,7 @@ class PosCheck {
     static int dz;
     public static void main(String[] args) {
         System.out.print("Put in the coordinates of the corners: ");
-        userInput = System.console().readLine().replaceAll("[^0-9, ]", "");
+        userInput = System.console().readLine().replaceAll("[^0-9, -]", "");
         data = userInput.split(",| ");
         for (int i = 0; i < 3; i++) {
             pos[i] = Math.min(Integer.parseInt(data[i]), Integer.parseInt(data[i+3]));
